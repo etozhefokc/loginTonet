@@ -5,11 +5,17 @@ import json
 
 class config_loader():
     def __init__(self):
-          config = open('config.json', encoding='utf-8')
-          conf = json.load(config)
-          self.login = conf['tsu_ipoe_login']
-          self.password = conf['tsu_ipoe_password']
-          self.delay = int(conf['delay'])
+        try:
+            config = open('config.json', encoding='utf-8')
+            conf = json.load(config)
+            self.login = conf['tsu_ipoe_login']
+            self.password = conf['tsu_ipoe_password']
+            self.delay = int(conf['delay'])
+        except FileNotFoundError:
+            print("no config file found")
+            self.login = 'login'
+            self.password = 'password'
+            self.delay = int(30)
    
 def login():
     cl = config_loader()
