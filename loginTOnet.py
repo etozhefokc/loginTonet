@@ -17,7 +17,11 @@ def login():
     url = 'https://ipoe.tsutmb.ru/'
     req = http.request('POST', url, fields={'tsu_ipoe_login': cl.login ,'tsu_ipoe_password': cl.password})
     print('trying to connect ipoe.tsutmb.ru')
-    print(req.data.decode('utf-8'))
+    wrong_str = 'Неправильный логин или пароль'
+    if (wrong_str in req.data.decode('utf-8')):
+        print("wrong login or password")
+    else:
+        print("you are logged in")
     
 def amionline():
     try:
