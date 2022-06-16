@@ -1,12 +1,11 @@
 # loginTonet
 
 To run on Windows you should install python3 and two python modules: certifi and urllib3.
-
 Python can be downloaded from official site:
-
 https://www.python.org/downloads/
 
 In comand line:
+
 pip install certifi
 pip install urllib3
 
