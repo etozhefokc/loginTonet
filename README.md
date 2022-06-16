@@ -4,14 +4,14 @@ https://www.python.org/downloads/
 
 #### In comand line:
 
-pip install certifi
-pip install urllib3
+###### pip install certifi
+###### pip install urllib3
 
 #### Before running on Linux you should install two python modules: certifi and urllib3
 
-sudo apt install python3-certifi
-sudo apt install python3-urllib3
+###### sudo apt install python3-certifi
+###### sudo apt install python3-urllib3
 
 #### This how to run the script in terminal:
 
-python3 loginTOnet.py
+###### python3 loginTOnet.py
