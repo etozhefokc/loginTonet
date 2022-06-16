@@ -1,3 +1,4 @@
+#### Before running the script you should edit config.json file. Change LOGIN and PASSWORD for your own ones.
 #### To run on Windows you should install python3 and two python modules: certifi and urllib3.Python can be downloaded from official site:
 https://www.python.org/downloads/
 
