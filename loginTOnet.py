@@ -41,14 +41,21 @@ def amionline():
         return 0
     
 def stayonline():
-    if (amionline() == 0):
-        login()
-        
-cl = config_loader()
-delay = cl.delay
-while(1>0):
+    cl = config_loader()
+    delay = cl.delay
+    while(1>0):
+        if (amionline() == 0):
+            login()
+        time.sleep(delay)
+
+try:
        stayonline()
-       time.sleep(delay)
+except KeyboardInterrupt:
+        r = input('Do you wanna reconnect?')
+        if (r == 'y'):
+            stayonline()
+            
+
 
 
         
